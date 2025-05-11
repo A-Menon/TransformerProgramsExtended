@@ -39,7 +39,7 @@ unzip data/glove.840B.300d.zip
 
 The code to learn a Transformer Program can be found in [src/run.py](src/run.py). You can enable the extended modules using the following flags:
 --use_prefix_counts for prefix sum aggregation
---use_expert_routing for mixture-of-experts routing
+--use_experts for mixture-of-experts routing
 For example, the following command will train a Transformer Program for the `sort` task, using two layers, four categorical attention heads per-layer, one-hot input embeddings, and both improvements:
 ```bash
 python src/run.py \
@@ -59,7 +59,7 @@ python src/run.py \
      --one_hot_embed \
      --count_only \
      --use_prefix_counts \
-     --use_expert_routing \
+     --use_experts \
      --seed 0 \
      --save \
      --save_code \
